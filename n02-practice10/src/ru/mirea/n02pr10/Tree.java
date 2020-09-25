@@ -83,18 +83,18 @@ public abstract class Tree<T extends Comparable<T>> {
             node = node.right;
             return node;
         }
-        // Обе ветви => ищем наим. значение в левой ветви
-        Node min = minValueInLeftBranch(node.left);
+        // Обе ветви => ищем наим. значение в правой ветви
+        Node min = minValueInRightBranch(node.right);
         node.value = min.value;
-        node.left = remove(node.left, min.value);
+        node.right = remove(node.right, min.value);
         return node;
     }
 
     /**
      * Поиск наименьшего числа в левой ветви
      */
-    protected Node minValueInLeftBranch(Node node) {
-        return (node.left != null) ? minValueInLeftBranch(node.left) : node;
+    protected Node minValueInRightBranch(Node node) {
+        return (node.left != null) ? minValueInRightBranch(node.left) : node;
     }
 
     /**

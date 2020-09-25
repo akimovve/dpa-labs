@@ -21,7 +21,7 @@ public class Main {
         tree.addNode(15, 67, 1);
         System.out.println("\n\n\nИзначальное дерево...\n");
         tree.print();
-        tree.remove(16);
+        tree.remove(6);
         tree.remove(2);
         System.out.println("\n\nПосле удаления элементов...\n");
         tree.print();
