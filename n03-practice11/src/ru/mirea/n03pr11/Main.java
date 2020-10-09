@@ -30,6 +30,9 @@ public class Main {
         table.add(reader04.getNum(), reader04);
         table.print();
 
+        // Вывод данных для демонстрации связей ключ-хеш
+        table.hashFuncTest();
+
         // Добавление и удаление элементов
         table.add(reader05.getNum(), reader05);
         table.add(reader06.getNum(), reader06);
@@ -38,6 +41,9 @@ public class Main {
         table.delete(10110L);
         table.delete(25632L);
         table.print();
+
+        // Вывод данных для демонстрации связей ключ-хеш
+        table.hashFuncTest();
 
         // Добавление в область удаленных элементов
         table.add(reader10.getNum(), reader10);
@@ -48,6 +54,8 @@ public class Main {
         System.out.println("SEARCH: " + table.search(97101L)); // -> Найдет
         System.out.println("SEARCH: " + table.search(57101L)); // -> Не найдет
 
+        // Вывод данных для демонстрации связей ключ-хеш
+        table.hashFuncTest();
 
         table.add(reader08.getNum(), reader08);
         table.add(reader09.getNum(), reader09);
@@ -56,7 +64,6 @@ public class Main {
         table.add(reader01.getNum(), reader01);
         table.add(reader03.getNum(), reader03);
         table.print();
-
 
         System.out.println(table.getSize());
         table.hashFuncTest();
