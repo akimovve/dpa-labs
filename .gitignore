@@ -19,5 +19,8 @@ target/
 /.nb-gradle/
 build/
 
+### CLion ###
+cmake-build-*/
+
 ### VS Code ###
 .vscode/
